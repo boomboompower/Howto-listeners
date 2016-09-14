@@ -10,16 +10,19 @@ import org.bukkit.event.player.PlayerJoinEvent;
  * Created by ThePowerSquad on 22-Apr-16.
  */
 
-public class AListener implements Listener {
+public class AListener implements Listener 
+    {
 
     private AClass aClass;
-    public AListener(AClass aClass) {
+    public AListener(AClass aClass) 
+    {
         this.aClass = aClass;
         Bukkit.getPluginManager().registerEvents(this, aClass);
     }
 
     @EventHandler
-    private void onPlayerJoin(PlayerJoinEvent e) {
+    private void onPlayerJoin(PlayerJoinEvent e) 
+    {
         e.setJoinMessage(ChatColor.GREEN + "+ " + ChatColor.DARK_GREEN + e.getPlayer().getName());
     }
 }
